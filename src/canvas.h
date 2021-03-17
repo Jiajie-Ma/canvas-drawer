@@ -17,7 +17,7 @@ namespace agl
      unsigned char g;
      unsigned char b;
   };
-  
+
    class canvas
    {
    public:
@@ -52,6 +52,9 @@ namespace agl
 
       // Line interpolation using the Bresenham algorithm
       void draw_line();
+
+      // Triangle interpolation using barycentric coordinates
+      void draw_triangle();
 
       // helper function for canvas::draw_line method that draws a line (between a and b) whose slope is between -1 and 1
       void drawLineLow(point a, point b);
