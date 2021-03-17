@@ -8,6 +8,16 @@
 namespace agl
 {
    enum PrimitiveType {UNDEFINED, LINES, TRIANGLES};
+   // point struct that stores the position and color of a point
+   struct point
+  {
+     int x;
+     int y;
+     unsigned char r;
+     unsigned char g;
+     unsigned char b;
+  };
+  
    class canvas
    {
    public:
@@ -40,8 +50,20 @@ namespace agl
       // Fill the canvas with the given background color
       void background(unsigned char r, unsigned char g, unsigned char b);
 
+      // Line interpolation using the Bresenham algorithm
+      void draw_line();
+
+      // helper function for canvas::draw_line method that draws a line (between a and b) whose slope is between -1 and 1
+      void drawLineLow(point a, point b);
+
+      // helper function for canvas::draw_line method that draws a line whose slope is  > 1 or < 1
+      void drawLineHigh(point a, point b);
+
    private:
       ppm_image _canvas;
+      PrimitiveType _type; // current primitive to draw
+      ppm_pixel _color; // current color for vertex
+      std::vector<point> _vertices; // current vertices to draw
    };
 }
 
