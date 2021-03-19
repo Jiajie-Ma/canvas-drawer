@@ -124,7 +124,7 @@ Tile with triangles. This produces an illusion as if the lines are curved. In fa
 
 Tile with filled hexagons and outlined hexagons. The tiling was not mathematically calculated beforehand. Instead, we did fractal geometry by replacing each edge of a larger hexagon with a smaller hexagon recursively. The replacement involves finding mid-point and directional vector.
 
-![Filled Hexagon Tiling](results/FilledHexagonTiling.png)
+![Filled Hexagon Tiling](results/HexagonTiling2.png)
 
 ![Hexagon Tiling](results/HexagonTiling.png)
 
@@ -138,7 +138,7 @@ Select an arbitrary point on the picture and make a random decision whether its 
 
 A drawing of pokemon ball with miscellaneous primitives. The hemispheres are drawn using sectors and the button at the center is drawn using circle. The boundaries are sketched by using outlined circles and lines. They are called repeatedly with a small change of radii/vertices to expand the line width.
 
-![Pokemon Ball](results/Pokeball.png)
+![Pokemon Ball](results/PokeBall.png)
 
 
 
